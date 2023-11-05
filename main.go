@@ -19,7 +19,7 @@ type User struct {
 
 func main() {
 	// connect to database
-	db, err := sql.Open("postgres", os.Getenv("postgres://postgres:Asd@12345@db-9a63a5eb9ac14230953bc44216b13b08.svc.local:5432/postgres"))
+	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
 	if err != nil {
 		log.Fatal(err)
 	}
